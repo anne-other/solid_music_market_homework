@@ -42,4 +42,10 @@ public class SheetMusicTest {
     public void checkIsTabs() {
         assertEquals(true, sheetMusic.isTabs());
     }
+
+    @Test
+    public void checkIsStandardNotaion() {
+        SheetMusic sheetMusic1 = new SheetMusic("Sheet Music", 3.00, 3.99, "The Devil's Own", false);
+        assertEquals(false, sheetMusic1.isTabs());
+    }
 }
