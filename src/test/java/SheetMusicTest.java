@@ -10,7 +10,7 @@ public class SheetMusicTest {
 
     @Before
     public void setUp() throws Exception {
-        sheetMusic = new SheetMusic("Sheet Music", 4.00, 4.99, "Made Of Scars");
+        sheetMusic = new SheetMusic("Sheet Music", 4.00, 4.99, "Made Of Scars", true);
     }
 
     @Test
@@ -36,5 +36,10 @@ public class SheetMusicTest {
     @Test
     public void hasATitle() {
         assertEquals("Made Of Scars", sheetMusic.getTitle());
+    }
+
+    @Test
+    public void checkIsTabs() {
+        assertEquals(true, sheetMusic.isTabs());
     }
 }
