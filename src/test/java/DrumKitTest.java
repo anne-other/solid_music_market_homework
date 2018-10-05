@@ -12,7 +12,7 @@ public class DrumKitTest {
 
     @Before
     public void setUp() throws Exception {
-        drumKit = new DrumKit("Drum Kit", 250.00, 499.99, "Cherry Wood", "Red", InstrumentType.PERCUSSION);
+        drumKit = new DrumKit("Drum Kit", 250.00, 499.99, "Cherry Wood", "Red", InstrumentType.PERCUSSION, 5);
     }
 
     @Test
@@ -48,5 +48,10 @@ public class DrumKitTest {
     @Test
     public void hasInstrumentType() {
         assertEquals(InstrumentType.PERCUSSION, drumKit.getInstrumentType());
+    }
+
+    @Test
+    public void hasfiveDrums() {
+        assertEquals(5, drumKit.getNumberOfDrums());
     }
 }
