@@ -38,4 +38,9 @@ public class DrumKitTest {
     public void hasmaterial() {
         assertEquals("Cherry Wood", drumKit.getMaterial());
     }
+
+    @Test
+    public void hasColour() {
+        assertEquals("Red", drumKit.getColour());
+    }
 }
