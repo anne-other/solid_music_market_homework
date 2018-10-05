@@ -33,4 +33,9 @@ public class DrumKitTest {
     public void canCalculateMarkup() {
         assertEquals(249.99, drumKit.calculateMarkup(), 0.01);
     }
+
+    @Test
+    public void hasmaterial() {
+        assertEquals("Cherry Wood", drumKit.getMaterial());
+    }
 }
