@@ -1,6 +1,7 @@
 import org.junit.Before;
 import org.junit.Test;
 import stock_item.instrument.Guitar;
+import stock_item.instrument.Instrument;
 import stock_item.instrument.InstrumentType;
 
 import static org.junit.Assert.assertEquals;
@@ -62,5 +63,11 @@ public class GuitarTest {
     @Test
     public void checkIsElectric() {
         assertEquals(true, guitar.isElectric());
+    }
+
+    @Test
+    public void checkIsAcoustic() {
+        Guitar guitar1 = new Guitar("Guitar", 200.00, 249.99, "Mahogany", "Brown", InstrumentType.STRINGS, 6, false);
+        assertEquals(false, guitar1.isElectric());
     }
 }
