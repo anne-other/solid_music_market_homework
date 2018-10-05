@@ -1,3 +1,5 @@
+package stock_item;
+
 public abstract class StockItem {
 
     private String description;

@@ -1,3 +1,5 @@
+package stock_item;
+
 public class DrumStick extends StockItem {
 
     private String size;
