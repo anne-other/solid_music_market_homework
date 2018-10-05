@@ -10,7 +10,7 @@ public class SheetMusicTest {
 
     @Before
     public void setUp() throws Exception {
-        sheetMusic = new SheetMusic("Sheet Music", 4.00, 4.99);
+        sheetMusic = new SheetMusic("Sheet Music", 4.00, 4.99, "Made Of Scars");
     }
 
     @Test
@@ -31,5 +31,10 @@ public class SheetMusicTest {
     @Test
     public void canCalculateMarkup() {
         assertEquals(0.99, sheetMusic.calculateMarkup(), 0.01);
+    }
+
+    @Test
+    public void hasATitle() {
+        assertEquals("Made Of Scars", sheetMusic.getTitle());
     }
 }
