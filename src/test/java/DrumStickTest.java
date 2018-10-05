@@ -9,7 +9,7 @@ public class DrumStickTest {
 
     @Before
     public void setUp() throws Exception {
-        drumStick = new DrumStick("Drum Stick", 5.00, 8.99, "5A");
+        drumStick = new DrumStick("Drum Stick", 5.00, 8.99, "5A", "Hickory");
     }
 
     @Test
@@ -35,5 +35,10 @@ public class DrumStickTest {
     @Test
     public void hasAWeight() {
         assertEquals("5A", drumStick.getSize());
+    }
+
+    @Test
+    public void hasAMaterial() {
+        assertEquals("Hickory", drumStick.getMaterial());
     }
 }
