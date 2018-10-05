@@ -9,7 +9,7 @@ public class DrumStickTest {
 
     @Before
     public void setUp() throws Exception {
-        drumStick = new DrumStick("Drum Stick", 5.00, 8.99);
+        drumStick = new DrumStick("Drum Stick", 5.00, 8.99, "5A");
     }
 
     @Test
@@ -30,5 +30,10 @@ public class DrumStickTest {
     @Test
     public void canCalculateMarkup() {
         assertEquals(3.99, drumStick.calculateMarkup(), 0.01);
+    }
+
+    @Test
+    public void hasAWeight() {
+        assertEquals("5A", drumStick.getSize());
     }
 }
