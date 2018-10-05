@@ -11,7 +11,7 @@ public class GuitarTest {
 
     @Before
     public void setUp() throws Exception {
-        guitar = new Guitar("Guitar", 150.00, 199.99, "Ebony", "Black", InstrumentType.STRINGS, 6);
+        guitar = new Guitar("Guitar", 150.00, 199.99, "Ebony", "Black", InstrumentType.STRINGS, 6, true);
     }
 
     @Test
@@ -57,5 +57,10 @@ public class GuitarTest {
     @Test
     public void hasSixStrings() {
         assertEquals(6, guitar.getNumberOfStrings());
+    }
+
+    @Test
+    public void checkIsElectric() {
+        assertEquals(true, guitar.isElectric());
     }
 }
