@@ -1,6 +1,7 @@
 import org.junit.Before;
 import org.junit.Test;
 import stock_item.instrument.DrumKit;
+import stock_item.instrument.Instrument;
 import stock_item.instrument.InstrumentType;
 
 import static org.junit.Assert.assertEquals;
@@ -42,5 +43,10 @@ public class DrumKitTest {
     @Test
     public void hasColour() {
         assertEquals("Red", drumKit.getColour());
+    }
+
+    @Test
+    public void hasInstrumentType() {
+        assertEquals(InstrumentType.PERCUSSION, drumKit.getInstrumentType());
     }
 }
